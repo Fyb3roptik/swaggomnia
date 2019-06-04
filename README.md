@@ -2,13 +2,11 @@
   <img src="logo.png" width="50%"/>
 </div>
 
-[![CircleCI](https://circleci.com/gh/mlabouardy/swaggymnia/tree/master.svg?style=svg&circle-token=bcfce92d1e46aaf0d50b4b3fa8baf8406d4bc115)](https://circleci.com/gh/mlabouardy/swaggymnia/tree/master) [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE) [![Go Report Card](https://goreportcard.com/badge/github.com/mlabouardy/swaggymnia)](https://goreportcard.com/report/github.com/mlabouardy/swaggymnia)
-
-Generate Swagger Documentation from Insomnia REST Client
+Generate Swagger Documentation from Insomnia REST Client. This is a fork of swaggymnia. That repo is now dead.
 
 ## Download
 
-Below are the available downloads for the latest version of Swaggymnia  (1.0.0-beta). Please download the proper package for your operating system and architecture.
+Below are the available downloads for the latest version of Swaggomnia  (1.0.0-beta). Please download the proper package for your operating system and architecture.
 
 ### Linux:
 
@@ -92,13 +90,10 @@ $ swaggymnia generate -i examples/watchnow.json -c examples/config.json -o json
 }
 ```
 
-## Tutorials
-
-* [Generate beautiful Swagger Documentation from Insomnia](http://www.blog.labouardy.com/generate-swagger-documentation-from-insomnia-rest-client/)
-
 ## Maintainers
 
-- Mohamed Labouardy - mohamed@labouardy.com
+- Mohamed Labouardy - mohamed@labouardy.com - Original Author
+- Nick Wallace - nwallace@fyberstudios.com - New Author
 
 ## License
 
