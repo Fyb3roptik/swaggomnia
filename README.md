@@ -2,7 +2,7 @@
   <img src="logo.png" width="50%"/>
 </div>
 
-Generate Swagger Documentation from Insomnia REST Client. This is a fork of swaggymnia[https://github.com/mlabouardy/swaggymnia] which is now dead.
+Generate Swagger Documentation from Insomnia REST Client. This is a fork of [swaggymnia](https://github.com/mlabouardy/swaggymnia) which is now dead.
 
 ## Download
 
