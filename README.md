@@ -6,36 +6,36 @@ Generate Swagger Documentation from Insomnia REST Client. This is a fork of swag
 
 ## Download
 
-Below are the available downloads for the latest version of Swaggomnia  (1.0.0-beta). Please download the proper package for your operating system and architecture.
+Below are the available downloads for the latest version of swaggomnia  (1.0.1). Please download the proper package for your operating system and architecture.
 
 ### Linux:
 
 ```
-wget https://s3.amazonaws.com/swaggymnia/1.0.0-beta/linux/swaggymnia
+wget https://jrpublic.s3-us-west-2.amazonaws.com/linux/1.0.1/swaggomnia
 ```
 
 ### Windows:
 
 ```
-wget https://s3.amazonaws.com/swaggymnia/1.0.0-beta/windows/swaggymnia
+wget https://jrpublic.s3-us-west-2.amazonaws.com/windows/1.0.1/swaggomnia.exe
 ```
 
-### Mac OS X:
+### Mac:
 
 ```
-wget https://s3.amazonaws.com/swaggymnia/1.0.0-beta/osx/swaggymnia
+wget https://jrpublic.s3-us-west-2.amazonaws.com/mac/1.0.1/swaggomnia
 ```
 
 ### FreeBSD:
 
 ```
-wget https://s3.amazonaws.com/swaggymnia/1.0.0-beta/freebsd/swaggymnia
+wget https://jrpublic.s3-us-west-2.amazonaws.com/freebsd/1.0.1/swaggomnia
 ```
 
 ### OpenBSD:
 
 ```
-wget https://s3.amazonaws.com/swaggymnia/1.0.0-beta/openbsd/swaggymnia
+wget https://jrpublic.s3-us-west-2.amazonaws.com/openbsd/1.0.1/swaggomnia
 ```
 
 ## How to use it
@@ -43,13 +43,13 @@ wget https://s3.amazonaws.com/swaggymnia/1.0.0-beta/openbsd/swaggymnia
 See usage with:
 
 ```
-$ swaggymnia --help
+$ swaggomnia --help
 ```
 
 Generate Swagger documentation:
 
 ```
-$ swaggymnia generate -insomnia INSOMNIA_EXPORTED_FILE -config CONFIG_FILE -output FORMAT
+$ swaggomnia generate -insomnia INSOMNIA_EXPORTED_FILE -config CONFIG_FILE -output FORMAT
 ```
 
 | Option | Description |
@@ -70,7 +70,7 @@ Let's convert the following Insomnia API documentation to Swagger:
 Issue the following command:
 
 ```
-$ swaggymnia generate -i examples/watchnow.json -c examples/config.json -o json
+$ swaggomnia generate -i examples/watchnow.json -c examples/config.json -o json
 ```
 
 <div align="center">

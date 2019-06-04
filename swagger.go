@@ -12,7 +12,7 @@ import (
 
 	"github.com/ghodss/yaml"
 
-	. "github.com/mlabouardy/swaggymnia/models"
+	. "github.com/Fyb3roptik/swaggomnia/models"
 )
 
 var groupNames map[string]string
