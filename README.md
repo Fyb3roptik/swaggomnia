@@ -2,7 +2,7 @@
   <img src="logo.png" width="50%"/>
 </div>
 
-Generate Swagger Documentation from Insomnia REST Client. This is a fork of swaggymnia. That repo is now dead.
+Generate Swagger Documentation from Insomnia REST Client. This is a fork of swaggymnia[https://github.com/mlabouardy/swaggymnia] which is now dead.
 
 ## Download
 
@@ -91,8 +91,6 @@ $ swaggomnia generate -i examples/watchnow.json -c examples/config.json -o json
 ```
 
 ## Maintainers
-
-- Mohamed Labouardy - mohamed@labouardy.com - Original Author
 - Nick Wallace - nwallace@fyberstudios.com - New Author
 
 ## License
