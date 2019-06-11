@@ -2,48 +2,40 @@ language: go
 sudo: false
 matrix:
   include:
-    # "1.x" always refers to the latest Go version, inc. the patch release.
-    # e.g. "1.x" is 1.11 until 1.11.1 is available.
-    - go: 1.x
-      env: LATEST=true
-    - go: 1.7.x
-    - go: 1.8.x
-    - go: 1.9.x
-    - go: 1.10.x
-    - go: 1.11.x
-    - go: tip
+  - go: 1.x
+    env: LATEST=true
+  - go: 1.7.x
+  - go: 1.8.x
+  - go: 1.9.x
+  - go: 1.10.x
+  - go: 1.11.x
+  - go: tip
   allow_failures:
-    - go: tip
-
+  - go: tip
 before_install:
-  # gox simplifies building for multiple architectures
-  - go get github.com/mitchellh/gox
-  - openssl aes-256-cbc -K $encrypted_753c4dc224f6_key -iv $encrypted_753c4dc224f6_iv -in github_deploy_key.enc -out ~\/.ssh/github_deploy_key -d
-
+- go get github.com/mitchellh/gox
 install:
-  - # skip
-
+-
 script:
-  - go get -t -v ./...
-  - diff -u <(echo -n) <(gofmt -d .)
-  - go vet $(go list ./... | grep -v /vendor/)
-  - go test -v -race ./...
-  # Only build binaries from the latest Go release.
-  - if [ "${LATEST}" = "true" ]; then gox -os="linux darwin windows openbsd freebsd" -arch="amd64" -output="logshare.." -ldflags "-X main.Rev=`git rev-parse --short HEAD`" -verbose ./...; fi
-
+- go get -t -v ./...
+- diff -u <(echo -n) <(gofmt -d .)
+- go vet $(go list ./... | grep -v /vendor/)
+- go test -v -race ./...
+- if [ "${LATEST}" = "true" ]; then gox -os="linux darwin windows openbsd freebsd"
+  -arch="amd64" -output="logshare.." -ldflags "-X main.Rev=`git rev-parse --short
+  HEAD`" -verbose ./...; fi
 deploy:
   provider: releases
   skip_cleanup: true
+  api_key:
+    secure: aQU95XXaZkBNko9OzDJQEvBm6up3gtvEi4dTfOoQTC0RAMSXPG+/FGZQaE3QN158X5NuB8KxE742bXl0RGjpxtdQGWQjItjYfARj43v7ADE4AHIKMEkdGBLqyfwQ9AEH/xpsr/svKM/dxVv5WEt5vkLwfzHqsZb9k3MOtQJO7agTBWBqtnCX3VFz+pvS8nzDPAPNYO39rEH89bvTCxl/LfpmCcG3pEFmajosC4+QZ1i6v/HH1UvYf/s04XOXf1oBjHKdT5lSopv4Bi0SDH1d9wpwqHEe2iMMgQc2+Y1eWyF3uQKbHd3bPfIi9VLkqn8gMq1xgN5qPnnacTV849hLCp5ZSPnczXjLKjagUWSK29b+5r7Ljb7a1VGyupzD/28jATYuVFxmCwLpb4mfXe/02WLLb+2PTdgDUfAp/i2kopgISAUte0bVY74Eyo2a/ppPJbPUwXS5KeUZ6Kvg5uj9qN0oR8AYYe69gT3IZx8FSgkRn/VNQZXbdhcsGi0oNUuFmcxbDb2bleD49Ev0eHFo5xLmPkADLZHt/oxPQUMLnY5pS21E0HB6VIxtTEd5M18IEMrbYZnapC0PZEnMDP2k4liKz7/nKXBHGJF2T9ycaMWJEYBw0v820YVeNFputoJRR/6TKbkJcwUmTaoXAf7dOpUQaJW6KevpMgeiOe66Kxk=
   file:
-  # The names of the binaries to output, based on the -output template passed to gox.
   - swaggomnia.windows.amd64.exe
   - swaggomnia.darwin.amd64
   - swaggomnia.linux.amd64
   - swaggomnia.openbsd.amd64
   - swaggomnia.freebsd.amd64
   on:
-    # What to repository to build
     repo: Fyb3roptik/swaggomnia
-    # Only build binaries for tagged commits
     tags: true
-    condition: $LATEST = true
+    condition: "$LATEST = true"
