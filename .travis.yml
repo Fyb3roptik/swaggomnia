@@ -9,20 +9,18 @@ before_install:
 install:
 -
 script:
-- if [ "${LATEST}" = "true" ]; then gox -os="linux darwin windows openbsd freebsd"
-  -arch="amd64" -output="swaggomnia.." -ldflags "-X main.Rev=`git rev-parse --short
-  HEAD`" -verbose ./...; fi
+- if [ "${LATEST}" = "true" ]; then gox -os="linux darwin windows openbsd freebsd" -arch="amd64" -output="dist/swaggomnia.." -ldflags "-X main.Rev=`git rev-parse --short HEAD`" -verbose ./...; fi
 deploy:
   provider: releases
   skip_cleanup: true
   api_key:
     secure: qr9tU32qf10bjWofkO+fKUh537Yhc3u6GH0/XrjkcXWhoxuqyweEtrtm3+1nFJnKN2Kb2kH7CV7y+5IwAnkyoGuU/9178GgV6An8oMCgqyJW6P0J2Q570H9PqpvenruA0P8M6XtojeMT/97dnU91arQ5lUPbHEFPsagbSgErjfL8DrC3pOmY/+0pc0fz4fOFO4nFQtUG8b/lh2rKtaLZF8FRVd8cxpEQd211aK5CvuzU80/ll+iS1ta1bjZCg+UwF5gf5/ig0Sj+dp16h7Ewl9GxmrZWSeJN+PgSl6WLgAcOmccfPFY4uqe2RoKg8ePl5r6WduVNf5ZENLDJR/XOV5NsnRS84j9+d92d8SY3orBFrUU9UG4cBVW6oV7o9U6yW9sXAI7ZeR8sQlrAcIqq+JKSmN1MjOqITTHc2iyHJ7eqBNmCJP4wCg9qnviJze5x1RIabYanYbw7Cc6J6VSijuPzOnVOUz5jGxbu51ti2LMPlIN7ouYHN1XX+WuEGDtWZJffPwFEtlvGQz3GSB3y2tGUuzJykyeULmQsRpKkBMdNKy6jHJFatZAGw5NibYbZglW3uzuccI9PUSuoVPDil+CqT7kvMGIsK8uaWUJ56tk1LXSPMu877ZvznkWkoVybr4EM57HfvM4ZroGbpQwIpeEMq9xR0fGpB3YS9KpBBag=
   file:
-  - swaggomnia.windows.amd64.exe
-  - swaggomnia.darwin.amd64
-  - swaggomnia.linux.amd64
-  - swaggomnia.openbsd.amd64
-  - swaggomnia.freebsd.amd64
+  - dist/swaggomnia.windows.amd64.exe
+  - dist/swaggomnia.darwin.amd64
+  - dist/swaggomnia.linux.amd64
+  - dist/swaggomnia.openbsd.amd64
+  - dist/swaggomnia.freebsd.amd64
   on:
     repo: Fyb3roptik/swaggomnia
     branch: master
