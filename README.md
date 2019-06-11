@@ -1,45 +1,13 @@
-[![Build Status](https://travis-ci.com/Fyb3roptik/swaggomnia.svg?branch=master)](https://travis-ci.com/Fyb3roptik/swaggomnia)
-
 <div align="center">
-  <img src="logo.png" width="50%"/>
+  <img src="logo.png"/>
 </div>
 
 
-Generate Swagger Documentation from Insomnia REST Client. This is a fork of [swaggymnia](https://github.com/mlabouardy/swaggymnia) which is now dead.
+Generate Swagger Documentation from Insomnia REST Client. [![Build Status](https://travis-ci.com/Fyb3roptik/swaggomnia.svg?branch=master)](https://travis-ci.com/Fyb3roptik/swaggomnia)
+*This is a fork of [swaggymnia](https://github.com/mlabouardy/swaggymnia) which is now dead.*
 
-## Download
-
-Below are the available downloads for the latest version of swaggomnia  (1.0.1). Please download the proper package for your operating system and architecture.
-
-### Linux:
-
-```
-wget https://jrpublic.s3-us-west-2.amazonaws.com/linux/1.0.1/swaggomnia
-```
-
-### Windows:
-
-```
-wget https://jrpublic.s3-us-west-2.amazonaws.com/windows/1.0.1/swaggomnia.exe
-```
-
-### Mac:
-
-```
-wget https://jrpublic.s3-us-west-2.amazonaws.com/mac/1.0.1/swaggomnia
-```
-
-### FreeBSD:
-
-```
-wget https://jrpublic.s3-us-west-2.amazonaws.com/freebsd/1.0.1/swaggomnia
-```
-
-### OpenBSD:
-
-```
-wget https://jrpublic.s3-us-west-2.amazonaws.com/openbsd/1.0.1/swaggomnia
-```
+## Releases
+[Latest Release](https://github.com/Fyb3roptik/swaggomnia/releases/latest)
 
 ## How to use it
 
