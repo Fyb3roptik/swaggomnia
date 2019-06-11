@@ -4,11 +4,6 @@ matrix:
   include:
   - go: 1.x
     env: LATEST=true
-  - go: 1.7.x
-  - go: 1.8.x
-  - go: 1.9.x
-  - go: 1.10.x
-  - go: 1.11.x
   - go: tip
   allow_failures:
   - go: tip
@@ -17,10 +12,6 @@ before_install:
 install:
 -
 script:
-- go get -t -v ./...
-- diff -u <(echo -n) <(gofmt -d .)
-- go vet $(go list ./... | grep -v /vendor/)
-- go test -v -race ./...
 - if [ "${LATEST}" = "true" ]; then gox -os="linux darwin windows openbsd freebsd"
   -arch="amd64" -output="logshare.." -ldflags "-X main.Rev=`git rev-parse --short
   HEAD`" -verbose ./...; fi
