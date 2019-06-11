@@ -2,12 +2,16 @@
   <img src="logo.png"/>
 </div>
 
-
-Generate Swagger Documentation from Insomnia REST Client. [![Build Status](https://travis-ci.com/Fyb3roptik/swaggomnia.svg?branch=master)](https://travis-ci.com/Fyb3roptik/swaggomnia)
+<br />
+<br />
+## Description
+Generate Swagger Documentation from Insomnia REST Client.
 <br />
 *This is a fork of [swaggymnia](https://github.com/mlabouardy/swaggymnia) which is now dead.*
 
 ## Releases
+[![Build Status](https://travis-ci.com/Fyb3roptik/swaggomnia.svg?branch=master)](https://travis-ci.com/Fyb3roptik/swaggomnia)
+
 [Latest Release](https://github.com/Fyb3roptik/swaggomnia/releases/latest)
 
 ## How to use it
