@@ -4,6 +4,7 @@
 
 
 Generate Swagger Documentation from Insomnia REST Client. [![Build Status](https://travis-ci.com/Fyb3roptik/swaggomnia.svg?branch=master)](https://travis-ci.com/Fyb3roptik/swaggomnia)
+<br />
 *This is a fork of [swaggymnia](https://github.com/mlabouardy/swaggymnia) which is now dead.*
 
 ## Releases
