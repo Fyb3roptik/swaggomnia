@@ -13,7 +13,7 @@ install:
 -
 script:
 - if [ "${LATEST}" = "true" ]; then gox -os="linux darwin windows openbsd freebsd"
-  -arch="amd64" -output="logshare.." -ldflags "-X main.Rev=`git rev-parse --short
+  -arch="amd64" -output="swaggomnia.." -ldflags "-X main.Rev=`git rev-parse --short
   HEAD`" -verbose ./...; fi
 deploy:
   provider: releases
