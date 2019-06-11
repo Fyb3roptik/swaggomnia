@@ -5,12 +5,14 @@ jobs: # basic units of work in a run
       # CircleCI Go images available at: https://hub.docker.com/r/circleci/golang/
       - image: circleci/golang:1.12
 
-      steps: # steps that comprise the `build` job
-      - checkout # check out source code to working directory
-      - run: go get github.com/mitchellh/gox
-      - run: go get github.com/tcnksm/ghr
-      - run: gox -ldflags "-X main.Version $BUILD_VERSION -X main.BuildDate $BUILD_DATE" -output "dist/ncd_{{.OS}}_{{.Arch}}"
-      - run: ghr -t $GITHUB_TOKEN -u $CIRCLE_PROJECT_USERNAME -r $CIRCLE_PROJECT_REPONAME --replace `git describe --tags` dist/
+    parallelism: 2
+
+    steps: # steps that comprise the `build` job
+    - checkout # check out source code to working directory
+    - run: go get github.com/mitchellh/gox
+    - run: go get github.com/tcnksm/ghr
+    - run: gox -ldflags "-X main.Version $BUILD_VERSION -X main.BuildDate $BUILD_DATE" -output "dist/ncd_{{.OS}}_{{.Arch}}"
+    - run: ghr -t $GITHUB_TOKEN -u $CIRCLE_PROJECT_USERNAME -r $CIRCLE_PROJECT_REPONAME --replace `git describe --tags` dist/
 workflows:
   version: 2
   build-workflow:
