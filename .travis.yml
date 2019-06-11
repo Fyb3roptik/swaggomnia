@@ -8,7 +8,7 @@ matrix:
   allow_failures:
   - go: tip
 before_install:
-- go get github.com/mitchellh/gox
+- go get github.com/mitchellh/gox github.com/tcnksm/ghr github.com/Fyb3roptik/swaggomnia/models github.com/ghodss/yaml github.com/urfave/cli
 install:
 -
 script:
