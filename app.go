@@ -14,26 +14,26 @@ func main() {
 	app.Usage = "Insomnia to Swagger converter"
 	app.Version = "1.0.1"
 	app.Compiled = time.Now()
-	app.Authors = []cli.Author{
-		cli.Author{
+	app.Authors = []*cli.Author{
+		&cli.Author{
 			Name:  "Nick Wallace",
 			Email: "nwallace@fyberstudios.com",
 		},
 	}
-	app.Commands = []cli.Command{
+	app.Commands = []*cli.Command{
 		{
 			Name:    "generate",
 			Aliases: []string{"g"},
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "config, c",
 					Usage: "Load configuration from `FILE`",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "insomnia, i",
 					Usage: "Insomnia JSON `FILE`",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "output, o",
 					Value: "yaml",
 					Usage: "Output json|yaml",
