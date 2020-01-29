@@ -2,7 +2,7 @@ name: Swaggomnia Build
 on:
   push:
     tags:
-      - 1.*
+      - 2.*
 jobs:
 
   build:
