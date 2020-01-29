@@ -1,8 +1,6 @@
 {
   "title" : "WatchNow API",
   "version" : "1.0.0",
-  "host" : "api.watchnow.com",
-  "basePath" : "/v1",
-  "schemes" : "https",
+  "basePath" : "https://api.domain.com/v1",
   "description" : "This API allows you to get in real time movies playing in theatre."
 }

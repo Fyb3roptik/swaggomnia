@@ -154,7 +154,7 @@ func (s Swagger) generateYAML() {
 }
 
 func fetchVariables(resource *Resource) {
-	re := regexp.MustCompile("/{(.*?)}#*")
+	re := regexp.MustCompile("/{{ (.*?) }}#*")
 	for _, param := range re.FindAllStringSubmatch(resource.URL, -1) {
 		resource.InsomniaParams = append(resource.InsomniaParams, param[1])
 	}

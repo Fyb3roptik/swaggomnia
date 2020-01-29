@@ -11,8 +11,12 @@ Generate Swagger Documentation from Insomnia REST Client.
 <br />
 *This is a fork of [swaggymnia](https://github.com/mlabouardy/swaggymnia) which is now dead.*
 
-## Releases
-[![Build Status](https://travis-ci.com/Fyb3roptik/swaggomnia.svg?branch=master)](https://travis-ci.com/Fyb3roptik/swaggomnia) | [Latest Release](https://github.com/Fyb3roptik/swaggomnia/releases/latest)
+## Changelog
+
+`2.0`
+ * Open API 3 support
+ * Insomnia v4 support
+ * New Config Format
 
 ## How to use it
 
@@ -59,9 +63,7 @@ $ swaggomnia generate -i examples/watchnow.json -c examples/config.json -o json
 {
   "title" : "API Name",
   "version" : "API version",
-  "host" : "API URL",
-  "basePath" : "Base URL",
-  "schemes" : "HTTP protocol",
+  "basePath" : "https://api.domain.com/v1",
   "description" : "API description"
 }
 ```
