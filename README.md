@@ -5,6 +5,8 @@
 <br />
 <br />
 
+![Swaggomnia Build](https://github.com/Fyb3roptik/swaggomnia/workflows/Swaggomnia%20Build/badge.svg)
+
 ## Description
 
 Generate Swagger Documentation from Insomnia REST Client.
