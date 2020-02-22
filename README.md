@@ -13,6 +13,9 @@ Generate Swagger Documentation from Insomnia REST Client.
 <br />
 *This is a fork of [swaggymnia](https://github.com/mlabouardy/swaggymnia) which is now dead.*
 
+## Support
+[![Swaggomnia chat](https://badges.gitter.im/swaggomnia/gitter.png)](https://gitter.im/swaggomnia/community)
+
 ## Changelog
 
 `2.0`
