@@ -104,6 +104,9 @@ func (s Swagger) initTemplate() *template.Template {
 			for _, param := range re.FindAllStringSubmatch(path, -1) {
 				path = strings.Replace(path, param[0], "", -1)
 			}
+			if strings.ContainsAny(path, s.Config.BasePath) {
+				path = strings.Replace(path, s.Config.BasePath, "", -1)
+			}
 			return path
 		},
 		"GetGroupName": func(id string) string {
