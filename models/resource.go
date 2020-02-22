@@ -16,7 +16,7 @@ type Resource struct {
 	URL                             string         `json:"url,omitempty"`
 	Method                          string         `json:"method,omitempty"`
 	Body                            EntityBody     `json:"body,omitempty"`
-	Parameters                      []interface{}  `json:"parameters,omitempty"`
+	Parameters                      []QueryParameters  `json:"parameters,omitempty"`
 	Headers                         []EntityHeader `json:"headers,omitempty"`
 	Authentication                  struct{}       `json:"authentication,omitempty"`
 	SettingStoreCookies             bool           `json:"settingStoreCookies,omitempty"`
@@ -37,7 +37,10 @@ type EntityParam struct {
 	ID       string `json:"id"`
 	Disabled bool   `json:"disabled"`
 }
-
+type QueryParameters struct {
+	Name  string `json:"name"`
+	Value string `json:"value"`
+}
 type EntityHeader struct {
 	Name  string `json:"name"`
 	Value string `json:"value"`

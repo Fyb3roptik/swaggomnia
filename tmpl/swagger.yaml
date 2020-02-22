@@ -19,14 +19,14 @@ paths:
       tags:
       - "{{ $key | GetGroupName }}"
       summary: "{{ $resource.Name }}"
-      {{- if or $resource.InsomniaParams $resource.Body.Params $resource.Headers }}
+      {{- if or $resource.Parameters $resource.Body.Params $resource.Headers }}
       {{- if $resource.Body.MimeType }}
       description: "{{ $resource.Description }}"
       {{- end }}
       parameters:
-      {{- range $p, $param := $resource.InsomniaParams}}
-      - name: "{{ $param }}"
-        in: "path"
+      {{- range $p, $param := $resource.Parameters}}
+      - name: "{{ $param.Name }}"
+        in: "query"
         schema:
           type: "string"
         description: ""
