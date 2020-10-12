@@ -18,6 +18,9 @@ Generate Swagger Documentation from Insomnia REST Client.
 
 ## Changelog
 
+`2.0.1`
+ * Updated Logo
+
 `2.0`
  * Open API 3 support
  * Insomnia v4 support
