@@ -26,12 +26,14 @@ func main() {
 			Aliases: []string{"g"},
 			Flags: []cli.Flag{
 				&cli.StringFlag{
-					Name:  "config, c",
-					Usage: "Load configuration from `FILE`",
+					Name:     "config, c",
+					Usage:    "Load configuration from `FILE`",
+					Required: true,
 				},
 				&cli.StringFlag{
-					Name:  "insomnia, i",
-					Usage: "Insomnia JSON `FILE`",
+					Name:     "insomnia, i",
+					Usage:    "Insomnia JSON `FILE`",
+					Required: true,
 				},
 				&cli.StringFlag{
 					Name:  "output, o",
