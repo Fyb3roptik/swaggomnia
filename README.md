@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="logo.png"/>
+  <img src="logo.svg"/>
 </div>
 
 <br />
@@ -17,6 +17,9 @@ Generate Swagger Documentation from Insomnia REST Client.
 [![Swaggomnia chat](https://badges.gitter.im/swaggomnia/gitter.png)](https://gitter.im/swaggomnia/community)
 
 ## Changelog
+
+`2.0.1`
+ * Updated Logo
 
 `2.0`
  * Open API 3 support
