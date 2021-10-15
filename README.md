@@ -9,6 +9,8 @@
 
 ## Description
 
+THIS IS A DEAD REPO NOW. Insomnia should now support this internally.
+
 Generate Swagger Documentation from Insomnia REST Client.
 <br />
 *This is a fork of [swaggymnia](https://github.com/mlabouardy/swaggymnia) which is now dead.*
