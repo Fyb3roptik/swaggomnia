@@ -28,6 +28,15 @@ Generate Swagger Documentation from Insomnia REST Client.
  * Insomnia v4 support
  * New Config Format
 
+## How to build
+
+```bash
+go mod tidy
+go build
+chmod +x swaggomnia
+export PATH=$PATH:$(pwd)
+```
+
 ## How to use it
 
 See usage with:
